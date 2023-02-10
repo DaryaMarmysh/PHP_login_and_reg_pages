@@ -33,7 +33,7 @@ if (isset($_POST['exit_form'])) {
 
 if (isset($_POST['form'])) {
     $nameError = $loginError = $emailError = $passwordError = $captchaError = '';
-    $name = clearString($_POST['name']);
+    $username = clearString($_POST['username']);
     $login = clearString($_POST['login']);
     $email = clearString($_POST['email']);
     $password = clearString($_POST['password']);
@@ -42,9 +42,9 @@ if (isset($_POST['form'])) {
 
     include '../database/db.php';
     //name validate
-    if ($name == '') {
+    if ($username == '') {
         $nameError .= "Заполните поле";
-    } else if ((!preg_match('/(*UTF8)^([A-zА-я]){5,}$/m', $name))) {
+    } else if ((!preg_match('/(*UTF8)^([A-zА-я]){5,}$/m', $username))) {
         $nameError .= "Поле может содержать только латинские и русские символы. Минимум 5 знаков.";
     }
     //loginvalidate
@@ -98,8 +98,8 @@ if (isset($_POST['form'])) {
     if ($nameError . $loginError . $emailError . $passwordError . $password_reError . $captchaError == '') {
         $file = fopen("log/$login.txt", 'a+');
         $password_hesh = hash('md5', $password);
-        $query = "INSERT INTO users (name, login, email, password, file)
-        VALUES ('$name','$login','$email','$password_hesh','" . file_get_contents("../log/$login.txt") . "')";
+        $query = "INSERT INTO users (username, login, email, password, file)
+        VALUES ('$username','$login','$email','$password_hesh','" . file_get_contents("../log/$login.txt") . "')";
         $result = mysqli_query($link, $query) or die("Ошибка " .
             mysqli_error($link));
         if ($result) {
@@ -141,7 +141,7 @@ function printLog($success, $login)
         <form action='index.php' method="post">
             <input type="hidden" name='form' value="1" required>
 
-            <input type="text" name="name" placeholder="ФИО" value="<?= @$name; ?> " required>
+            <input type="text" name="username" placeholder="ФИО"  value="<?= @$username; ?>" required>
             <span class="error"><?= @$nameError; ?></span>
 
             <input type="text" name="login" placeholder="Логин" value="<?= @$login; ?>" required>
