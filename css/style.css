@@ -1,0 +1,208 @@
+.root {
+    --mainWhite: #e6e6e6;
+    --superGrey: #676767;
+    --primary: #3392f5;
+}
+
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 96vh;
+    width: 98vw;
+    padding: 6px 0;
+    background: #e0e5ec;
+    font-size: 14px;
+    font-family: "Gill Sans", sans-serif;
+    color: #676767;
+}
+
+body {
+    max-height: 100vh;
+}
+
+header {
+
+    display: flex;
+    padding: 5px 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 80%;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001,
+        inset 0px 0px 0px 0px #fff9,
+        inset 0px 0px 0px 0px #0001,
+        inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 6px;
+    height: 90%;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001,
+        inset 0px 0px 0px 0px #fff9,
+        inset 0px 0px 0px 0px #0001,
+        inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+    border-radius: 10px;
+    padding: 6px 40px;
+}
+
+.reg {
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    box-shadow: none;
+    padding: 6px 40px;
+    align-items: center;
+}
+
+.reg input {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+input {
+    width: 350px;
+    height: 35px;
+    margin: 4px 0;
+    padding-left: 25px;
+    font-size: 13px;
+    letter-spacing: .15px;
+    border: none;
+    outline: none;
+    font-family: "Gill Sans", sans-serif;
+    color: #676767;
+    background-color: #e0e5ec;
+    transition: .25s ease;
+    border-radius: 8px;
+    box-shadow:
+        inset -7px -7px 20px 0px #ffffff14, inset -4px -4px 5px 0px #ffffff73, inset 7px 7px 20px 0px #00000012, inset 4px 4px 5px 0px #0000000f, 0px 0px 0px 0px #ffffff63, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001
+}
+
+.button {
+    padding: 0;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.15px;
+
+    background-color: rgb(18, 85, 219);
+    color: #e0e5ec;
+    box-shadow:
+        8px 8px 16px #fff9,
+        -8px -8px 16px #e0e5ec;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+svg {
+    width: 30px;
+    height: 30px;
+}
+
+a {
+    height: min-content;
+}
+
+img {
+    border-radius: 8px;
+    box-shadow:
+        inset -7px -7px 20px 0px #ffffff14, inset -4px -4px 5px 0px #ffffff73, inset 7px 7px 20px 0px #00000012, inset 4px 4px 5px 0px #0000000f, 0px 0px 0px 0px #ffffff63, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001
+}
+
+.error {
+    display: flex;
+    width: 350px;
+    margin: 6px 0;
+    font-size: 10px;
+    color: #1255db;
+}
+
+.captcha-img-btn {
+    gap: 6px;
+    width: 375px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.captcha-img-btn input {
+    width: auto;
+    height: 42px;
+}
+.capcha-error{
+        display: block;
+        text-align: right;
+        width: 100%;
+
+}
+.footer {
+    padding: 0 36px;
+    width: 80%;
+}
+
+.footer p {
+    text-align: right;
+}
+
+.header-btn {
+    width: fit-content;
+    align-self: flex-end;
+    cursor: pointer;
+}
+.table {
+  margin: 4vh 0;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(171, 171, 171);
+}
+
+.row {
+  width: 100%;
+}
+
+a {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 18px;
+  color: rgb(25, 25, 25);
+  text-decoration: none;
+  position: relative;
+  align-items:center;
+}
+.status{
+  background-color: green;
+  color: aliceblue;
+  padding: 6px 8px;
+}
+.row:hover{
+  background-color: rgb(223, 223, 223);
+}
